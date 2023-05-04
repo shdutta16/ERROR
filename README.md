@@ -2,7 +2,7 @@
 Collection of errors encountered and their solutions while working
 
 
-###1. `jupyter notebook` error after installing ROOT 6.26.10
+### 1. `jupyter notebook` error after installing ROOT 6.26.10
    
    Following error was faced after trying to open jupyter notebook post ROOT 6.26.10 installation
    ```
