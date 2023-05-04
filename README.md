@@ -33,5 +33,5 @@ Collection of errors encountered and their solutions while working
    ```
    CAUSE: The cause of the error is `thisroot.sh`, which is sourced when terminal launches, sets the variables `JUPYTER_PATH` and `JUPYTER_CONFIG_DIR`. This was not    done/present in the earlier versions of ROOT. As a result, when jupyter is trying to launch it encounters a conflict. 
   
-  SOLUTION: This is a stop gap solution. I have commented the lines in `thisroot.sh` that modifies `JUPYTER_PATH` and `JUPYTER_CONFIG_DIR`, thus avoiding the conflict. In    case some other issue is faced in the future by ROOT, it should be checked whether this is the cause of it or not. 
+   SOLUTION: This is a stop gap solution. I have commented the lines in `thisroot.sh` that modifies `JUPYTER_PATH` and `JUPYTER_CONFIG_DIR`, thus avoiding the conflict. In    case some other issue is faced in the future by ROOT, it should be checked whether this is the cause of it or not. 
   
