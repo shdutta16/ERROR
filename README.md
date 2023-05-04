@@ -31,7 +31,7 @@ Collection of errors encountered and their solutions while working
       with open(os.path.join(env['jupyter_config'], 'migrated'), 'w') as f:
    PermissionError: [Errno 13] Permission denied: '/home/shubhamdutta/Applications/Package_install/root-6.26.10/etc/notebook/migrated'
    ```
-   CAUSE: The cause of the error is `thisroot.sh`, which is sourced when terminal launches, sets the variables `JUPYTER_PATH` and `JUPYTER_CONFIG_DIR`. This was not    done/present in the earlier versions of ROOT. As a result, when jupyter is trying to launch it encounters a conflict. 
+   CAUSE: The cause of the error is `thisroot.sh`, which is sourced when terminal launches, sets the variables `JUPYTER_PATH` and `JUPYTER_CONFIG_DIR`. This was not    done/present in the earlier versions of ROOT. As a result, when jupyter is trying to launch it encounters a conflict. [ref](https://root-forum.cern.ch/t/jupyter-problem/43120)
   
    SOLUTION: This is a stop gap solution. I have commented the lines in `thisroot.sh` that modifies `JUPYTER_PATH` and `JUPYTER_CONFIG_DIR`, thus avoiding the conflict. In    case some other issue is faced in the future by ROOT, it should be checked whether this is the cause of it or not. 
   
